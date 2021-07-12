@@ -302,7 +302,7 @@
             
             updateGame();
 
-            $('#team-text').html(team);
+            $('#team-text').html(spectating ? "spectator" : team);
         })
 
         socket.on('action', (data) => {
