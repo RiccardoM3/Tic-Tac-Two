@@ -9,6 +9,9 @@ app.get("/", function(req, res) {
     res.sendFile(__dirname + "/resources/html/index.html");
 });
 
+app.use('/css', express.static('resources/css'));
+app.use('/js', express.static('resources/js'));
+
 var blue_player = null;
 var red_player = null;
 var current_turn = "red";
